@@ -1,0 +1,87 @@
+snippet     stationery
+abbr        <?xml ...>...<project ...>...<target>
+options     head
+  <?xml version="1.0" encoding="utf-8" ?>
+  <!DOCTYPE ant>
+  <project name="${1:#:project-name}">
+    <target name="${2:#:target-name}">
+    </target>
+  </project>
+
+snippet     project
+abbr        <project ...>...</project>
+options     head
+  <project name="${1:#:project-name}">
+  </project>
+
+snippet     target
+abbr        <target ...>...</target>
+options     head
+  <target name="${1:#:target-name}">
+  </target>
+
+snippet     delete
+abbr        <delete dir="..." />
+options     head
+  <delete dir="${1:#:dir-path}" />
+
+snippet     mkdir
+abbr        <mkdir dir="..." />
+options     head
+  <mkdir dir="${1:#:dir-path}" />
+
+snippet     path
+abbr        <path ...>...</path>
+options     head
+  <path id="${1:#:path}">
+  </path>
+
+snippet     fileset
+abbr        <fileset dir="..." includes="..." />
+options     head
+  <fileset dir="${1:#:dir-path}" includes="${2:#:file-name}" />
+
+snippet     javac
+abbr        <javac ... />
+options     head
+  <javac classpathref="${1:#:classpath-id}
+         srcdir="${2:#:srcdir-path}"
+         destdir="${3:#:destdir-path}"
+         encoding="${4:utf-8}"
+         source="${5:1.8}"
+         target="${6:1.8}"
+         fork="${7:true}"
+         memorymaximumsize="${8:256m}"
+         includeAntRuntime="${9:false}"
+         debug="${10:true}"
+         debuglevel="${11:lines,vars,source}" />
+
+snippet     copy
+abbr        <copy ...>...</copy>
+options     head
+  <copy todir="${1:#:todir-path}" overwrite="${2:#:true}">
+  </copy>
+
+snippet     war
+abbr        <war ...>...</war>
+options     head
+  <war destfile="${1:#:destfile-path}"
+       basedir="${2:#:basedir-path}"
+       webxml="${3:#:webxml-path}">
+  </war>
+
+snippet     java
+abbr        <java ...>...</java>
+options     head
+  <java classname="${1:#:classname}" 
+        classpathref="${2:#:classpath-id}"
+        failonerror="${3:true}"
+        fork="${4:true}">
+  </java>
+
+snippet     checkstyle
+abbr        <checkstyle ...>...</checkstyle>
+options     head
+  <checkstyle config="${1:#:config-path}" failOnViolation="${2:false}">
+  </checkstyle>
+
