@@ -41,3 +41,8 @@ snippet     import-ipdb_set_trace
 abbr        import-ipdb;ipdb.set_trace()
 options     head
   import ipdb; ipdb.set_trace()
+
+snippet     list-map-input-split
+abbr        list(map(..., input().split()))
+options     
+  list(map(${1:int}, input().split(${2})))
