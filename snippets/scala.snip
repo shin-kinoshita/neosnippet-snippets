@@ -1,6 +1,14 @@
 snippet       def-main
-abbr          def main(args:Array[String]){ ... }
+abbr          def main(args: Array[String]){...}
 options       head
-  def main(args:Array[String]){
-    ${1}
+  def main(args: Array[String]){
+    ${0}
   }
+
+snippet       def
+abbr          def function(...){...}
+options       head
+  def ${1:#:name}(${2}){
+    ${0}
+  }
+
