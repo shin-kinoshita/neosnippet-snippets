@@ -1,7 +1,44 @@
+# import libraries
+snippet     import-numpy
+abbr        import numpy as np
+alias       numpy
+options     head
+  import numpy as np
+
+snippet     import-pandas
+abbr        import pandas as pd
+alias       pandas
+options     head
+  import pandas as pd
+
+snippet     import-matplotlib.pyplot
+abbr        import matplotlib.pyplot as plt
+alias       matplotlib.pyplot
+options     head
+  import matplotlib.pyplot as plt
+
 snippet       from_docopt
 abbr          from docopt import docopt
 options       head
   from docopt import docopt
+
+# debugging
+snippet     import-pdb_set_trace
+abbr        import-pdb;pdb.set_trace()
+options     head
+  import pdb; pdb.set_trace()
+
+snippet     import-ipdb_set_trace
+abbr        import-ipdb;ipdb.set_trace()
+options     head
+  import ipdb; ipdb.set_trace()
+
+# programming contests
+snippet     list-map-input-split
+abbr        list(map(..., input().split()))
+alias       lmis
+options     
+  list(map(${1:int}, input().split(${2})))
 
 snippet       __doc__docopt
 abbr          __doc__ = """..."""
@@ -32,17 +69,3 @@ options     head
           path_list.extend(path_list_partial)
       return path_list
 
-snippet     import-pdb_set_trace
-abbr        import-pdb;pdb.set_trace()
-options     head
-  import pdb; pdb.set_trace()
-
-snippet     import-ipdb_set_trace
-abbr        import-ipdb;ipdb.set_trace()
-options     head
-  import ipdb; ipdb.set_trace()
-
-snippet     list-map-input-split
-abbr        list(map(..., input().split()))
-options     
-  list(map(${1:int}, input().split(${2})))
