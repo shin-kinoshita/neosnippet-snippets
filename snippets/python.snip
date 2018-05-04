@@ -2,35 +2,34 @@
 snippet     import-numpy
 abbr        import numpy as np
 alias       numpy
-options     head
   import numpy as np
+
+snippet     import-math
+abbr        import math
+alias       math
+  import math
 
 snippet     import-pandas
 abbr        import pandas as pd
 alias       pandas
-options     head
   import pandas as pd
 
 snippet     import-matplotlib.pyplot
 abbr        import matplotlib.pyplot as plt
 alias       matplotlib.pyplot
-options     head
   import matplotlib.pyplot as plt
 
 snippet       from_docopt
 abbr          from docopt import docopt
-options       head
   from docopt import docopt
 
 # debugging
 snippet     import-pdb_set_trace
 abbr        import-pdb;pdb.set_trace()
-options     head
   import pdb; pdb.set_trace()
 
 snippet     import-ipdb_set_trace
 abbr        import-ipdb;ipdb.set_trace()
-options     head
   import ipdb; ipdb.set_trace()
 
 # programming contests
@@ -40,9 +39,9 @@ alias       lmis
 options     
   list(map(${1:int}, input().split(${2})))
 
+# docopt
 snippet       __doc__docopt
 abbr          __doc__ = """..."""
-options       head
   __doc__ = """{f}
   Usage:
       {f} ${1:#:param}
@@ -53,19 +52,9 @@ options       head
 
 snippet       args_docpot
 abbr          args = docopt(__doc__)
-options       head
   args = docopt(__doc__)
 
-snippet     def-import_path_list
-abbr        def import_path_list(...): ...
-options     head
-  def import_path_list(dir_path):
-      path_list = []
-      class_list = [ class_name for class_name in os.listdir(dir_path) 
-                      if os.path.isdir(dir_path + '/' + class_name) ]
-      for class_name in class_list:
-          path_list_partial = [ dir_path + '/' + class_name + '/' + file_name 
-                                  for file_name in os.listdir(dir_path + '/' + class_name) ]
-          path_list.extend(path_list_partial)
-      return path_list
+snippet     enumerate
+abbr        enumerate(...)
+  enumerate(${1})
 
